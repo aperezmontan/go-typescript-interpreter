@@ -29,7 +29,7 @@ func TestNextToken(test *testing.T) {
     for index, testToken := range tests {
         tok := lexer.NextToken()
 
-        if tok.Type != testToken.expectedToken {
+        if tok.Type != testToken.expectedType {
             test.Fatalf("tests[%d] - tokentype wrong. expected=%q, got %q",
             index, testToken.expectedType, tok.Type)
         }
